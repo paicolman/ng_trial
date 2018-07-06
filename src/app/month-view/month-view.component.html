@@ -1,0 +1,21 @@
+<div calendar="" class="calendar ng-isolate-scope" id="calendar">
+	<div class="header">
+		<div class="month">{{monthLabels[monthIndex]}}</div>
+		<div class="year">{{year}}</div>
+		<!--div class="ring-left"></div-->
+		<!--div class="ring-right"></div-->
+		<div class="right" (click)="increaseMonth()"></div>
+		<div class="left" (click)="decreaseMonth()"></div>
+	</div>
+	<div class="week-days">
+		<span *ngFor="let dayLabel of weekDayLabels; let idx = index" class="day">{{weekDayLabels[(idx)]}}</span>
+	</div>
+	<div class="month new">
+		<div *ngFor="let week of weeks; let w = index" class="week">
+			<div *ngFor="let day of days; let d = index" class="day" style="cursor: default;">
+				<span class="circle" style="transform: scale(0, 0);"></span>
+				<div class="day-number" (click) = "switchToDayView(dayLabels[(w*7)+d])">{{dayLabels[(w*7)+d]}}</div>
+			</div>
+		</div>
+  </div>
+</div>

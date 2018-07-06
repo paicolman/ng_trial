@@ -1,0 +1,3 @@
+
+<app-month-view *ngIf="displayMode=='MONTH'" [monthToDisplay]="activeDate" (viewChange)="switchView($event,'DAY')"></app-month-view>
+<app-day-view *ngIf="displayMode=='DAY'" [dayToDisplay]="activeDate" (viewChange)="switchToMonthView($event,'MONTH')"></app-day-view>

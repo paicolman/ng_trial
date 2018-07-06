@@ -1,0 +1,10 @@
+<div calendar="" class="calendar ng-isolate-scope" id="calendar">
+	<div class="header">
+		<div class="date">{{dayLabel}}</div>
+    <div class="weekday">{{weekdayLabel}}</div>
+		<div class="right" (click)="increaseDay()"></div>
+		<div class="left" (click)="decreaseDay()"></div>
+	</div>
+</div>
+<hr>
+<div class="header" (click)="switchToMonthView()">[go back...]</div>
